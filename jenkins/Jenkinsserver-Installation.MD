@@ -6,7 +6,7 @@ Use instruction from below link
 https://piyushchaudhariblog.wordpress.com/2024/12/03/how-to-install-configure-jenkins-on-amazon-linux-2023/
 
 java -version
-find / -name java-11* | head -n 4 --this will show java home path
+find / -name java-17* | head -n 4 --this will show java home path
 /etc/alternatives/java-17-amazon-corretto
 /usr/lib/jvm/java-17-amazon-corretto.x86_64 -- need to take this path
 /usr/lib/jvm/java-17-amazon-corretto
