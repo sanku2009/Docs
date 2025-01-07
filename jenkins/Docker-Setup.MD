@@ -1,6 +1,7 @@
 ## Install Docker
 ```sh
 yum install docker
+systemctl status docker
 systemctl start docker
 systemctl enable docker
 ```
