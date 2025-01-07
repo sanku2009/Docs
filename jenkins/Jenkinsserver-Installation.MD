@@ -5,6 +5,24 @@ To create EC2 instance use t2.medium (need to pay)
 Use instruction from below link
 https://piyushchaudhariblog.wordpress.com/2024/12/03/how-to-install-configure-jenkins-on-amazon-linux-2023/
 
+java -version
+find / -name java-11* | head -n 4 --this will show java home path
+/etc/alternatives/java-17-amazon-corretto
+/usr/lib/jvm/java-17-amazon-corretto.x86_64 -- need to take this path
+/usr/lib/jvm/java-17-amazon-corretto
+
+pwd -- currently on root directory
+ls -lrta -- this will show all contains including hiden file. select .bash_profile to add Java home
+
+vi .bash_profile
+
+JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto.x86_64
+export JAVA_HOME
+PATH=$PATH:$JAVA_HOME
+
+source ~/.bash_profile -- after change in .bash_profile file root user has to logout and login again to reflect the change. But if execute this command then don't need to logout
+
+java -version
 ------------------------------------------------------------------------------------------------
 don't use below instruction as this won't work for amazon-linux-2023 EC2 instance ------------
 
