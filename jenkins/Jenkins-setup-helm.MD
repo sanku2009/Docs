@@ -27,7 +27,15 @@ vi config -- paste the contains coppied from EC2 server manageing EKS cluster co
 
 helm list -- execute this command again
 
--- check document helm-command.MD
+# set up helm as by default help repo is not available and other set up if required
+helm repo list -- this won't show any list
+chmod 600 /var/lib/jenkins/.kube/config -- this will change permission on config file foe .kube
+helm repo list -- still this will show error saying no repo list present. because installed helm3 which by default won't provide any helm stable repo. for that needs to add helm default stable repo
+helm repo add stable https://charts.helm.sh/stable -- this will add helm default stable repo
+helm repo list -- won't show any error
+helm search repo stable  -- show all default helm chart
+
+
 ```
 
 
