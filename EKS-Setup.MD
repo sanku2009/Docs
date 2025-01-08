@@ -61,7 +61,7 @@ eksctl create cluster --name san-eks-cluster1 --region us-east-1 --node-type t2.
 
 5. To delete the EKS clsuter 
    ```sh 
-   eksctl delete cluster cloudfreak-cluster --region ap-south-1
+   eksctl delete cluster san-eks-cluster1 --region us-east-1
    ```
    
 6. Validate your cluster using by creating by checking nodes and by creating a pod 
