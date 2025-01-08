@@ -25,6 +25,9 @@ PATH=$PATH:$JAVA_HOME
 source ~/.bash_profile -- after change in .bash_profile file root user has to logout and login again to reflect the change. But if execute this command then don't need to logout
 
 java -version
+
+-- Attache IAM roles to the Jenkins server as this is going to communicate with EKS cluster. Needs to attached same IAM roles that was attached with EC2 instance for manageing the EKS cluster. Please check EKS-Setup.MD
+
 ------------------------------------------------------------------------------------------------
 don't use below instruction as this won't work for amazon-linux-2023 EC2 instance ------------
 
